@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: cursive;
+            max-width: 1550px;
+            
+        }
+        .navbar{
+            z-index: 10;
+            position:sticky;
+            top: 0;
+            width: 100%;
+            color: aliceblue;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo{
+            align-items: center;
+            display: flex;
+            font-family: cursive;
+            gap: 20px;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        a:hover{
+            color: black;
+            background-color: rgb(226, 230, 234);
+        }
+        .main{
+            margin-top: 40px;
+            margin-left: 25px;
+            height: 100vh;
+        }
+        .intro{
+            display: flex;
+            justify-content: space-between;
+        }
+        .intro p{
+            font-weight: bold;
+        }
+        .btn-intro{
+            display: flex;
+            gap: 5px;
+        }
+        .btn-intro svg{
+            color: blue;
+            width: 15px;
+        }
+        .btn-intro button{
+            background-color: white;
+            border: none;
+            color: blue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .center-ctn{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns:repeat(3,1fr) ;
+            gap: 30px;
+            
+        }
+
+        img{
+            height: 300px;
+            width: 300px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 20px;
+        }
+        .wraper1{
+            border-radius: 20px;
+            height: 450px;
+            width: 400px;
+            background-color: rgb(178, 187, 196);
+        }
+        .card-intro-price{
+            text-align: center;
+        }
+        
+        .wraper2{
+            border-radius: 20px;
+            height: 450px;
+            width: 400px;
+            background-color: rgb(178, 187, 196);
+        }
+        .card-intro-price2{
+            text-align: center;
+        }
+        .wraper1{
+            border-radius: 20px;
+            height: 450px;
+            width: 400px;
+            background-color: rgb(178, 187, 196);
+        }
+        .card-intro-price3{
+            text-align: center;
+        }
+        .new-beged{
+            border-radius: 20px;
+            width: 80px;
+            height: 50px;
+            position: relative;
+            top: 50px;
+            left: 40px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            font-weight: bold;
+            z-index: 0;
+        }
+        .new-beged2{
+            border-radius: 20px;
+            width: 80px;
+            height: 50px;
+            position: relative;
+            top: 50px;
+            left: 40px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: aliceblue;
+            z-index: 0;
+        }
+        .new-beged3{
+            border-radius: 20px;
+            width: 80px;
+            height: 50px;
+            position: relative;
+            top: 50px;
+            left: 40px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            font-weight: bold;
+            z-index: 0;
+        }
+        .intro p{
+            font-size: 20px;
+        }
+        .hero-ctn{
+            display: block;
+            margin: 35px auto;
+        }
+        .hero-wraper{
+            background-color: rgb(201, 208, 214);
+            border-radius: 20px;
+            width: 98%;
+            height: 75vh;
+        }
+        .hero-ctn{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .hero-introduction{
+            margin-left: 30px;
+            width: 700px;
+        }
+        .hero-title{
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-bottom: 1px solid black;
+        }
+        .hero-discription{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn-hero{
+            margin-top: 20px;
+            
+        }
+        .btn-deploy{
+            text-align: center;
+            margin-left: 40px;
+            padding: 10px 30px ;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+
+        }
+        .btn-view{
+            text-align: center;
+            margin-right: 200px;
+            padding: 10px 30px ;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+
+        }
+        .hero-img {
+            display: block;
+            margin: 0px auto;
+        }
+        .hero-img img{
+            width: 400px;
+            height: 530px;
+            display: block;
+            margin: 0px auto;
+        }
+        .title-product{
+            text-align: center;       
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div  class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package preview-icon"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+            <p>My Product Store</p>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+        <div class="pf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user preview-icon"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+    </nav>
+    <main id="home" class="main">
+        <div class="intro">
+            <p>Lastest Drop</p>
+            <div class="btn-intro">
+                <button>view all</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right preview-icon"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+        </div>
+        <section class="hero-ctn">
+            <div class="hero-wraper">
+                <div class="hero-ctn">
+                    <div class="hero-introduction">
+                        <p class="hero-title">LEONEL MESSI </p>
+                        <p class="hero-discription">Lionel Messi is wearing stylish black wireless headphones.
+                        He enjoys listening to music during his free time.He enjoys listening to music during his free time.
+                        The headphones provide clear sound and excellent comfort.
+                        Their modern design matches his sporty black outfit.
+                        Messi combines sports, technology, and personal style.
+                        He enjoys listening to music during his free time.He enjoys listening to music during his free time.
+                        The headphones provide clear sound and excellent comfort.
+                        Their modern design matches his sporty black outfit.
+                        Messi combines sports, technology, and personal style.
+                        Their modern design matches his sporty black outfit.
+                        Messi combines sports, technology, and personal style.
+                       </p>
+                       <div class="btn-hero">
+                           <button class="btn-deploy">Deploy</button>
+                           <button class="btn-view">View</button>
+                       </div>
+                    </div>
+                    <div class="hero-img">
+                        <img src="hero.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="title-product">
+            <h1>PRODUCT</h1>
+        </div>
+        <section id="product" class="container">
+            <div class="center-ctn">
+                <article class="wraper1">
+                    <div class="card">
+                        <p class="new-beged">NEW</p>
+                        <img src="white.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price">
+                            <p>White headphone bluthooth and wiless divice</p>
+                            <p>&euro;120.00$</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="wraper2">
+                    <div class="card">
+                        <span class="new-beged2">HOT</span>
+                        <img src="red.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price2">
+                            <p>black headphone bluthooth and wiless divice</p>
+                            <p>&euro;150.00$</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="wraper2">
+                    <div class="card">
+                        <span class="new-beged3">OLD</span>
+                        <img src="red.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price3">
+                            <p>red headphone bluthooth and wiless divice</p>
+                            <p>&euro;140.00$</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="wraper2">
+                    <div class="card">
+                        <span class="new-beged3">OLD</span>
+                        <img src="red.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price3">
+                            <p>red headphone bluthooth and wiless divice</p>
+                            <p>&euro;140.00$</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="wraper2">
+                    <div class="card">
+                        <span class="new-beged3">OLD</span>
+                        <img src="red.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price3">
+                            <p>red headphone bluthooth and wiless divice</p>
+                            <p>&euro;140.00$</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="wraper2">
+                    <div class="card">
+                        <span class="new-beged3">OLD</span>
+                        <img src="red.png" alt="a white headphone in my product store ">
+                        <div class="card-intro-price3">
+                            <p>red headphone bluthooth and wiless divice</p>
+                            <p>&euro;140.00$</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

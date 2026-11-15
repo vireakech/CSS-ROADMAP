@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        .pill-badge {
+            font-weight: 500;
+            font-size: 14px;
+            background-color: #c3c3cd;
+            color: #18181b;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;          
+        }
+        .pill-badge::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        *{ margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(68, 71, 156);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: cursive;
+            
+        }
+        .section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 160vh;
+            height: 90vh;
+        }
+        .ctn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140vh;
+            height: 90vh;
+            padding-bottom: 40px;
+            background-color: aliceblue;
+            
+        }
+        li{
+            color: black;
+            text-align: center;
+            font-size: small;
+            display: block;
+            margin-top: 0px auto;
+
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+        } 
+        .wraper{
+            margin-top: 0px;
+            width: 1000px;
+            height: 550px;
+        }
+        .title{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-family: cursive;
+        }
+        .title h2{
+            font-size: 40px;
+        }
+        .caption{
+            margin-top: 10px;
+            width: 470px;
+            color: #585858;
+        }
+        .ctn-btn{
+            margin-top: 20px;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            transition: 0.3s;
+            padding: 7px 15px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            border: 1px solid #a8a8a8;
+        }
+        button:hover{
+            background-color: #000;
+            color: aliceblue;
+        }
+        img{
+            width: 320px;
+            height: 250px;
+            border-radius: 20px;
+        }
+        .container{
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .landscape{
+            margin-top: 20px;
+        }
+        .name{
+            width: 320px;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .card{
+            width: 320px;
+        }
+        .review{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #858484;
+        }
+        .details{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            align-items: center;
+        }
+        .location{
+            display: flex;
+            border-right: 1px soid black;
+
+        }
+        .date{
+            display: flex;
+        }
+        .rating{
+            display: flex;
+        }
+        .per-night{
+            color: #858484;
+            font-size: 13px;
+            text-align: center;
+        }
+        .price-des{
+            color: #858484;
+            font-size: 13px;
+        }
+        .favorite-italy{
+            position: relative;
+            top: 40px;
+            left: 280px;  
+            color: aliceblue;
+        }
+        .favorite-japan{
+            position: relative;
+            top: 40px;
+            left: 280px;  
+            color: aliceblue;
+        }
+        .favorite-kenya{
+            position: relative;
+            top: 40px;
+            left: 280px;  
+            color: aliceblue;
+        }
+        .favorite-italy svg,
+        .favorite-japan svg,
+        .favorite-kenya svg{
+            fill: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="ctn">
+            <div class="wraper">
+                <span class="pill-badge">Who we are?</span>
+                <div class="title">
+                    <h2>Best travel desination</h2>
+                    <p class="caption">
+                        Explore the best properties in prime locations and take the next step towards your future today.
+                    </p>
+                </div>
+                <div class="ctn-btn">
+                    <div class="btn">
+                        <button>Family Holidays</button>
+                        <button>Mountains</button>
+                        <button>Beaches</button>
+                        <button>Luxury Stays</button>
+                        <button>Budget Travel</button>
+                        <button>City Escaoes</button>
+                        <button>Moundtain Retreats</button>
+                        <button>Beach Getaways</button>
+                    </div>
+                </div>
+                <section class="landscape">
+                    <div class="container">
+                        <article class="card">
+                            <span class="favorite-italy"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M10,17L8.96,16.06q-2.08-1.85-3.44-3.18T3.39,10.53T2.3,8.65T2,6.9Q2,5.04 3.27,3.77T6.4,2.5q1.02,0 1.98,0.44T10,4.17q0.67-0.79 1.63-1.23T13.6,2.5q1.85,0 3.12,1.27T18,6.9q0,0.9-0.29,1.73t-1.07,1.85t-2.15,2.36Q13.13,14.19 11,16.1L10,17Zm0-2.02q1.94-1.73 3.19-2.95t1.99-2.13t1.03-1.61T16.5,6.9q0-1.23-0.83-2.06T13.6,4q-0.73,0-1.36,0.3T11.15,5.15L10.42,6H9.58L8.85,5.15Q8.4,4.6 7.74,4.3T6.4,4Q5.17,4 4.33,4.83T3.5,6.9q0,0.69 0.27,1.36T4.76,9.83t1.98,2.13T10,14.98Zm0-5.5Z"/></svg></span>
+                            <img src="italy.png" alt="">  
+                            <p class="name">Culinary Jouney Through the Streets of Italy</p>    
+                            <div class="review">
+                                <div class="location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M11.06,9.56Q11.5,9.13 11.5,8.5T11.06,7.44T10,7T8.94,7.44T8.5,8.5T8.94,9.56T10,10t1.06-0.44ZM10,16.02q2.48-2.23 3.74-4.1T15,8.56q0-2.19-1.43-3.63T10,3.5T6.43,4.94T5,8.56q0,1.48 1.26,3.35T10,16.02ZM10,18q-3.27-2.73-4.89-5.07T3.5,8.56q0-2.79 1.85-4.68T10,2q2.77,0 4.64,1.89T16.5,8.56q0,2.02-1.6,4.35T10,18Zm0-9.5Z"/></svg>
+                                    <p class="city">Italy</p>
+                                </div>
+                                <div class="date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M4.5,18q-0.62,0-1.06-0.45T3,16.5V5.5Q3,4.9 3.44,4.45T4.5,4H6V2H7.5V4h5V2H14V4h1.5q0.62,0 1.06,0.45T17,5.5v11q0,0.6-0.44,1.05T15.5,18H4.5Zm0-1.5h11V9H4.5v7.5Zm0-9h11v-2H4.5v2Zm0,0v-2v2ZM10,12q-0.32,0-0.54-0.21T9.25,11.25t0.21-0.54T10,10.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,12ZM6.22,11.79Q6,11.57 6,11.25t0.21-0.54T6.75,10.5t0.54,0.21T7.5,11.25T7.29,11.78T6.75,12T6.22,11.79ZM13.25,12q-0.32,0-0.54-0.21T12.5,11.25t0.21-0.54t0.53-0.22t0.54,0.21T14,11.25t-0.21,0.54T13.25,12ZM10,15q-0.32,0-0.54-0.21T9.25,14.25t0.21-0.54T10,13.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,15ZM6.22,14.79Q6,14.57 6,14.25t0.21-0.54T6.75,13.5t0.54,0.21T7.5,14.25T7.29,14.78T6.75,15T6.22,14.79ZM13.25,15q-0.32,0-0.54-0.21T12.5,14.25t0.21-0.54t0.53-0.22t0.54,0.21T14,14.25t-0.21,0.54T13.25,15Z"/></svg>
+                                    <p>August 15-20</p>
+                                </div>
+                                <div class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M7.33,13.9L10,12.31l2.69,1.58l-0.71-3l2.31-1.98L11.23,8.65L10,5.79L8.77,8.65L5.71,8.92L8.04,10.9l-0.71,3ZM5.06,17l1.31-5.54L2,7.73l5.75-0.5L10,2l2.25,5.25L18,7.73l-4.38,3.73L14.94,17L10,14.06L5.06,17ZM10,10.06Z"/></svg>
+                                    <p>0.5 raing</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <div class="price">
+                                    <p>$750 <span class="per-night">/Night</span></p>
+                                    <p class="price-des">Including meals and excursions</p>
+                                </div>
+                                <div class="view-more">
+                                    <button>View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <span class="favorite-japan"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M10,17L8.96,16.06q-2.08-1.85-3.44-3.18T3.39,10.53T2.3,8.65T2,6.9Q2,5.04 3.27,3.77T6.4,2.5q1.02,0 1.98,0.44T10,4.17q0.67-0.79 1.63-1.23T13.6,2.5q1.85,0 3.12,1.27T18,6.9q0,0.9-0.29,1.73t-1.07,1.85t-2.15,2.36Q13.13,14.19 11,16.1L10,17Zm0-2.02q1.94-1.73 3.19-2.95t1.99-2.13t1.03-1.61T16.5,6.9q0-1.23-0.83-2.06T13.6,4q-0.73,0-1.36,0.3T11.15,5.15L10.42,6H9.58L8.85,5.15Q8.4,4.6 7.74,4.3T6.4,4Q5.17,4 4.33,4.83T3.5,6.9q0,0.69 0.27,1.36T4.76,9.83t1.98,2.13T10,14.98Zm0-5.5Z"/></svg></span>
+                            <img src="switse.png" alt="">  
+                            <p class="name">Explore the Hidden Wonders of the World Advanture</p>    
+                            <div class="review">
+                                <div class="location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M11.06,9.56Q11.5,9.13 11.5,8.5T11.06,7.44T10,7T8.94,7.44T8.5,8.5T8.94,9.56T10,10t1.06-0.44ZM10,16.02q2.48-2.23 3.74-4.1T15,8.56q0-2.19-1.43-3.63T10,3.5T6.43,4.94T5,8.56q0,1.48 1.26,3.35T10,16.02ZM10,18q-3.27-2.73-4.89-5.07T3.5,8.56q0-2.79 1.85-4.68T10,2q2.77,0 4.64,1.89T16.5,8.56q0,2.02-1.6,4.35T10,18Zm0-9.5Z"/></svg>
+                                    <p class="city">Japan</p>
+                                </div>
+                                <div class="date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M4.5,18q-0.62,0-1.06-0.45T3,16.5V5.5Q3,4.9 3.44,4.45T4.5,4H6V2H7.5V4h5V2H14V4h1.5q0.62,0 1.06,0.45T17,5.5v11q0,0.6-0.44,1.05T15.5,18H4.5Zm0-1.5h11V9H4.5v7.5Zm0-9h11v-2H4.5v2Zm0,0v-2v2ZM10,12q-0.32,0-0.54-0.21T9.25,11.25t0.21-0.54T10,10.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,12ZM6.22,11.79Q6,11.57 6,11.25t0.21-0.54T6.75,10.5t0.54,0.21T7.5,11.25T7.29,11.78T6.75,12T6.22,11.79ZM13.25,12q-0.32,0-0.54-0.21T12.5,11.25t0.21-0.54t0.53-0.22t0.54,0.21T14,11.25t-0.21,0.54T13.25,12ZM10,15q-0.32,0-0.54-0.21T9.25,14.25t0.21-0.54T10,13.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,15ZM6.22,14.79Q6,14.57 6,14.25t0.21-0.54T6.75,13.5t0.54,0.21T7.5,14.25T7.29,14.78T6.75,15T6.22,14.79ZM13.25,15q-0.32,0-0.54-0.21T12.5,14.25t0.21-0.54t0.53-0.22t0.54,0.21T14,14.25t-0.21,0.54T13.25,15Z"/></svg>
+                                    <p>July 3 to 7</p>
+                                </div>
+                                <div class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M7.33,13.9L10,12.31l2.69,1.58l-0.71-3l2.31-1.98L11.23,8.65L10,5.79L8.77,8.65L5.71,8.92L8.04,10.9l-0.71,3ZM5.06,17l1.31-5.54L2,7.73l5.75-0.5L10,2l2.25,5.25L18,7.73l-4.38,3.73L14.94,17L10,14.06L5.06,17ZM10,10.06Z"/></svg>
+                                    <p>4.8 raing</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <div class="price">
+                                    <p>$400 <span class="per-night">/Night</span></p>
+                                    <p class="price-des">Including taxes and fees</p>
+                                </div>
+                                <div class="view-more">
+                                    <button>View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <span class="favorite-kenya"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M10,17L8.96,16.06q-2.08-1.85-3.44-3.18T3.39,10.53T2.3,8.65T2,6.9Q2,5.04 3.27,3.77T6.4,2.5q1.02,0 1.98,0.44T10,4.17q0.67-0.79 1.63-1.23T13.6,2.5q1.85,0 3.12,1.27T18,6.9q0,0.9-0.29,1.73t-1.07,1.85t-2.15,2.36Q13.13,14.19 11,16.1L10,17Zm0-2.02q1.94-1.73 3.19-2.95t1.99-2.13t1.03-1.61T16.5,6.9q0-1.23-0.83-2.06T13.6,4q-0.73,0-1.36,0.3T11.15,5.15L10.42,6H9.58L8.85,5.15Q8.4,4.6 7.74,4.3T6.4,4Q5.17,4 4.33,4.83T3.5,6.9q0,0.69 0.27,1.36T4.76,9.83t1.98,2.13T10,14.98Zm0-5.5Z"/></svg></span>
+                            <img src="sea.png" alt="">  
+                            <p class="name">Wildlife Safari in the Heart of Kenya</p>    
+                            <div class="review">
+                                <div class="location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M11.06,9.56Q11.5,9.13 11.5,8.5T11.06,7.44T10,7T8.94,7.44T8.5,8.5T8.94,9.56T10,10t1.06-0.44ZM10,16.02q2.48-2.23 3.74-4.1T15,8.56q0-2.19-1.43-3.63T10,3.5T6.43,4.94T5,8.56q0,1.48 1.26,3.35T10,16.02ZM10,18q-3.27-2.73-4.89-5.07T3.5,8.56q0-2.79 1.85-4.68T10,2q2.77,0 4.64,1.89T16.5,8.56q0,2.02-1.6,4.35T10,18Zm0-9.5Z"/></svg>
+                                    <p class="city">Switzerland</p>
+                                </div>
+                                <div class="date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M4.5,18q-0.62,0-1.06-0.45T3,16.5V5.5Q3,4.9 3.44,4.45T4.5,4H6V2H7.5V4h5V2H14V4h1.5q0.62,0 1.06,0.45T17,5.5v11q0,0.6-0.44,1.05T15.5,18H4.5Zm0-1.5h11V9H4.5v7.5Zm0-9h11v-2H4.5v2Zm0,0v-2v2ZM10,12q-0.32,0-0.54-0.21T9.25,11.25t0.21-0.54T10,10.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,12ZM6.22,11.79Q6,11.57 6,11.25t0.21-0.54T6.75,10.5t0.54,0.21T7.5,11.25T7.29,11.78T6.75,12T6.22,11.79ZM13.25,12q-0.32,0-0.54-0.21T12.5,11.25t0.21-0.54t0.53-0.22t0.54,0.21T14,11.25t-0.21,0.54T13.25,12ZM10,15q-0.32,0-0.54-0.21T9.25,14.25t0.21-0.54T10,13.5t0.54,0.21t0.22,0.53t-0.21,0.54T10,15ZM6.22,14.79Q6,14.57 6,14.25t0.21-0.54T6.75,13.5t0.54,0.21T7.5,14.25T7.29,14.78T6.75,15T6.22,14.79ZM13.25,15q-0.32,0-0.54-0.21T12.5,14.25t0.21-0.54t0.53-0.22t0.54,0.21T14,14.25t-0.21,0.54T13.25,15Z"/></svg>
+                                    <p>Sep 10 to 17</p>
+                                </div>
+                                <div class="rating">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.5 0.5 19 19" height="19px" width="19px" fill="#999999"><path d="M7.33,13.9L10,12.31l2.69,1.58l-0.71-3l2.31-1.98L11.23,8.65L10,5.79L8.77,8.65L5.71,8.92L8.04,10.9l-0.71,3ZM5.06,17l1.31-5.54L2,7.73l5.75-0.5L10,2l2.25,5.25L18,7.73l-4.38,3.73L14.94,17L10,14.06L5.06,17ZM10,10.06Z"/></svg>
+                                    <p>4.9 raing</p>
+                                </div>
+                            </div>
+                            <div class="details">
+                                <div class="price">
+                                    <p>$1200 <span class="per-night">/Night</span></p>
+                                    <p class="price-des">Including meals and excursions</p>
+                                </div>
+                                <div class="view-more">
+                                    <button>View Details</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div> 
+
+</body>
+</html>

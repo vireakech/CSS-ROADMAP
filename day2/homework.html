@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(30deg,red,gold);
+            min-height: 100vh;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .card{
+            padding: 10px;
+            width: 300px;
+            height: 450px;
+            background-color: rgb(206, 35, 16);
+            margin: 0px auto;
+            border-radius: 10px;
+
+        }
+        .card img{
+            width: 250px;
+            height: 150px;
+            display: block;
+            margin: 20px auto;
+            object-fit: fill;
+            border-radius: 10px;
+        }
+        .title{
+            text-align: center;
+            font-size: xx-large;
+            letter-spacing: 3px;
+            line-height:2 ;
+            font-family:cursive;
+            color: rgb(248, 248, 248);
+        }
+        .discription{
+            text-align: center;
+            line-height: 1.5;
+            font-family: cursive;
+            letter-spacing: 2px;
+            font-size: 15px;
+            color: rgb(255, 252, 252);
+        }
+        .price{
+            font-size: large;
+            font-family: cursive;
+            color: rgb(0, 217, 255);
+            font-weight: bold;
+            margin: 5px 10px;
+        }
+        .btn{
+            display: block;
+            margin: 10px auto;
+            width: 90%;
+            padding: 8px;
+            border-radius: 10px;
+            border: 0px ;
+            transition: 1s;
+        }
+        .btn:hover{
+            background: linear-gradient(90deg,red,gold
+            );
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="image.png" alt="">
+        <h2 class="title">Roneat ek</h2>
+        <p class="discription">
+            Instrument of khmer people make by thair hand with skills
+        </p>
+        <p class="price">$100</p>
+        <button class="btn">Buy Now</button>
+    </div>
+</body>
+</html>
