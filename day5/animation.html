@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            transition: 0.5s;
+            border-radius: 20px;
+        }
+        .box:hover{
+
+            background-color: black;
+            color: #ffffff;
+            border-radius: 20px;
+            animation: Movebox 2s infinite;
+        }
+        @keyframes Movebox{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateY(200px);
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="center">
+        <div class="box">box</div>
+    </div>
 </body>
 </html>
