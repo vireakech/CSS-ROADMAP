@@ -184,6 +184,57 @@
         .favorite-kenya svg{
             fill: #fff;
         }
+        @media (max-width: 1050px) {
+            body {
+                min-height: 100vh;
+                height: auto;
+            }
+            .section,
+            .ctn {
+                width: 100%;
+                height: auto;
+            }
+            .ctn {
+                padding: 32px 16px 40px;
+            }
+            .wraper {
+                width: 100%;
+                height: auto;
+            }
+            .container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .card,
+            img,
+            .name {
+                width: 100%;
+            }
+            .favorite-italy,
+            .favorite-japan,
+            .favorite-kenya {
+                left: calc(100% - 40px);
+            }
+        }
+        @media (max-width: 640px) {
+            .title {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .title h2 {
+                font-size: 30px;
+            }
+            .caption {
+                width: 100%;
+            }
+            .btn {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
