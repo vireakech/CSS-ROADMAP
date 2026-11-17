@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ctn{
+            justify-content: center;
+            display: flex;
+            width: 400px;
+            height: 300px;
+            align-items: center;
+            gap: 5px;
+            background-color: antiquewhite;
+        }
+        button{
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 30px;
+            background-color: green;
+            text-align: center;
+            border: none;
+            color: white;
+            transition: background-color 1s ease;
+        }
+        .box1:hover{
+            background-color: black;
+            color: white;
+        }
+        .btn{
+            display: flex;
+            width: 300px;
+            gap: 50px;
+        }
+        .box2{
+        
+            transition: 0.5s ease-in-out
+        }
+        .box2:hover{
+            width: 120px;
+            height: 180px;
+
+        }
+        .box3{
+        transition-property: border;
+        transition-duration: 1.5s;
+        transition-timing-function: linear;
+        border: 2px solid blue;
+        }
+        
+        .box3:hover{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="ctn">
+        <div class="btn">
+            <button class="box1">box1</button>
+            <button class="box2">box2</button>
+            <button class="box3">box3</button>
+        </div>
+       
+    </div>
+</body>
+</html>
