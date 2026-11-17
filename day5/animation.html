@@ -3,55 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animation Types</title>
     <style>
-        *{
-            padding: 0;
+        * {
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(135deg, #f1f7ff, #dfeeff);
+            font-family: Arial, sans-serif;
         }
-        .center{
-            display:flex;
-            justify-content: center;
+
+        .lesson {
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            gap: 25px;
         }
-        .box{
+
+        h2 {
+            color: #123;
+            letter-spacing: 1px;
+        }
+
+        .demo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 150px;
-            height: 150px;
-            background: #f0f0f0;
-            border: 1px solid #ccc;
-            transition: 0.5s;
             border-radius: 20px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
         }
-        .box:hover{
 
-            background-color: black;
-            color: #ffffff;
-            border-radius: 20px;
-            animation: Movebox 2s infinite;
+        .fade { background: #4ecdc4; animation: fadeIn 2s ease-in-out infinite alternate; }
+        .slide { background: #ff6b6b; animation: slide 2s ease-in-out infinite alternate; }
+        .scale { background: #f7b267; animation: scaleUp 1.8s ease-in-out infinite alternate; }
+        .rotate { background: #6c5ce7; animation: rotateBox 2s linear infinite; }
+        .bounce { background: #00b894; animation: bounce 1.5s ease-in-out infinite; }
+        .pulse { background: #e17055; animation: pulse 1.5s ease-in-out infinite; }
+
+        @keyframes fadeIn {
+            0% { opacity: 0.2; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
         }
-        @keyframes Movebox{
-            from{
-                transform: translateX(20px);
-            }
-            to{
-                transform: translateY(0px);
-            }
+
+        @keyframes slide {
+            0% { transform: translateX(-20px); }
+            100% { transform: translateX(20px); }
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
+        @keyframes rotateBox {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
     </style>
 </head>
 <body>
-    <div class="center">
-        <div class="box">box</div>
+    <div class="lesson">
+        <h2>CSS Animation Types</h2>
+
+        <div class="demo-grid">
+            <div class="box fade">Fade</div>
+            <div class="box slide">Slide</div>
+            <div class="box scale">Scale</div>
+            <div class="box rotate">Rotate</div>
+            <div class="box bounce">Bounce</div>
+            <div class="box pulse">Pulse</div>
+        </div>
     </div>
 </body>
 </html>
