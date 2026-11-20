@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg:rgb(23, 20, 20);
+            --btn:rgb(206, 0, 0);
+            --text:rgb(255, 255, 255);
+            --title:rgb(55, 185, 55);
+            --btn-secendary:rgb(54, 29, 164);
+            --btn-size:10px 20px;
+            --ctn-w:300px;
+            --ctn-h:500px;
+            --ctn-w2:275px;
+            --ctn-h2:480px;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            background-color: var(--bg);
+            font-family: cursive;
+            overflow: hidden;
+        }
+        .ctn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--ctn-w);
+            height: var(--ctn-h);
+            background-color: var(--bg);
+            border-radius: 20px;
+        }
+        .card{
+            width: var(--ctn-w2);
+            height: var(--ctn-h2);
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+        img{
+            display: block;
+            margin: 20px auto;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: rotated 2s linear infinite;
+        }
+        .title{
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            animation: silde 2s linear  ;
+        }
+        .title p{
+            background-color: var(--title);
+            padding: 10px 20px;
+            border-radius: 10px;
+            
+        }
+        p{
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 10px;
+        }
+        .me{
+            background-color: var(--btn);
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            animation: silder 2s ;
+        }
+        .abt{
+            background-color: var(--btn-secendary);
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            animation: sildes 2s ;
+        }
+        @keyframes rotated{
+            0%{transform: rotate(0);}
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes silde{
+            0%{
+                transform: translateX(200px);opacity: 0;
+            }
+            50%{
+                transform: translateX(100px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        @keyframes sildes{
+            0%{
+                transform: translatex(200px);opacity: 0;
+            }
+          
+            100%{
+                transform: translatex(0);
+            }
+        }
+        @keyframes silder{
+            0%{
+                transform: translatex(-200px);opacity: 0;
+            }
+           
+            100%{
+                transform: translatex(0);
+            }
+        }
+        @keyframes fadeup{
+            0%{transform: scale(1);}
+            100%{transform: scale(1.2);}
+        }
+        @keyframes scaled{
+            0%{transform: scale(1);}
+            100%{transform: scale(1.2);}
+        }
+        .name{animation: fadeup 1s infinite alternate; }
+        .dis{ animation:scaled 1s infinite alternate ; }
+        </style>
+</head>
+<body>
+    <div class="ctn">
+        <div class="card">
+            <img  src="image.png" alt="">
+            <p class="name">Nhoa keavireakech</p>
+            <div class="title">
+                <p>NUM</p>
+                <p>WEB</p>
+            </div>
+            <p class="dis">hi a am a webdev in num</p>
+            <div class="btn">
+                <button class="me">Contact me</button>
+                <button class="abt">about me</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

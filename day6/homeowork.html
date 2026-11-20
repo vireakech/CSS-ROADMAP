@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-bg:white;
+            --secendary-bg:rgb(215, 212, 212);
+            --text:rgb(193, 193, 193);
+            --btn-bg:black;
+            --new-bedge:green;
+            --hot-bedge:red;
+            --discound:green;
+            --img-h:240px;
+            --img-w:250px;
+            --artical-h:450px;
+            --artical-w:275px;
+            --wraper-h:325px;
+            --wraper-w:250px;
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            background-color: var(--primary-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: cursive;
+        }
+        .sec-ctn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ctn{
+            display: flex;
+            justify-content: space-around;
+            gap: 50px;
+        }
+        .nike{
+            background-color: var(--primary-bg);
+            width: var(--artical-w);
+            height: var(--artical-h);
+            box-shadow: 0px 0px 20px rgb(210, 209, 209) ;
+            border-radius: 10px;      
+            animation: fadedown 2s linear infinite alternate ;
+
+        }
+        .addidas{
+            background-color: var(--primary-bg);
+            width: var(--artical-w);
+            height: var(--artical-h);
+            box-shadow: 0px 0px 20px rgb(210, 209, 209) ;
+            border-radius: 10px;
+            animation: fadeup 2s linear infinite alternate;
+        }
+        .wraper{
+            background-color: var(--secendary-bg);
+            width: var(--wraper-w);
+            height: var(--wraper-h);
+        }
+        img{
+            border-radius: 10px;
+            width: var(--img-w);
+            height: var(--img-h);
+            background-color: var(--secendary-bg);
+            display: block;
+            margin: 15px auto;
+        }
+        .nike-img{
+            position: relative;
+        }
+        .hot-badge{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background-color: var(--hot-bedge);
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .addidas-img{
+            position: relative;
+        }
+        .new-badge{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background-color: var(--new-bedge);
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .nike-img svg{
+            position: absolute;
+        }
+        .nike-icon{
+            position: absolute;
+            background-color: rgb(243, 243, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: 10px;
+            right: 25px;
+            padding: 15px;
+        }
+        .nike-icon:hover{
+            position: absolute;
+            background-color: rgb(215, 14, 14);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: 10px;
+            right: 25px;
+            padding: 15px;
+        }
+        svg{
+            fill: rgb(0, 0, 0);
+        }
+        .addidas-icon{
+            position: absolute;
+            background-color: rgb(243, 243, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: 10px;
+            right: 25px;
+            padding: 6px;
+        }
+        .addidas-icon:hover{
+            position: absolute;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            top: 10px;
+            right: 25px;
+            padding: 6px;
+        }
+        .change-color{
+            display: flex;
+            padding-left:13px ;
+            gap: 2px;
+            align-items: center;
+            
+        }
+        
+        .color1{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(72, 17, 201) ;
+        }
+        .color1{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(17, 201, 57) ;
+        }
+        .color2{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(201, 45, 17) ;
+        }
+        .color3{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(172, 11, 137) ;
+        }
+        .color4{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(23, 219, 190) ;
+        }
+        .color5{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(201, 170, 17) ;
+        }
+        .color6{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(223, 190, 190) ;
+        }
+        .color7{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background-color:rgb(191, 220, 166) ;
+        }
+        .change-color p{
+            color: var(--text);
+        }
+       .discription{
+        margin-left:13px ;
+       }
+       .title{
+        margin-top: 15px;
+        font-weight: bold;
+       }
+       .dis{
+        margin-top: 10px;
+        font-size: 10px;
+        color: rgb(97, 95, 95);
+        font-weight: bold;
+       }
+       .btn1{
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-evenly;
+        gap: 5px;
+       }
+       .btn2{
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+        gap: 5px;
+       }
+       .add-card{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        color: aliceblue;
+        background-color: var(--btn-bg);
+       }
+       .add-card svg{
+        fill: aliceblue;
+       }
+       .price{
+        display: flex;
+        gap: 13px;
+       }
+       .view,.add-card{
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        border-radius: 30px;
+        border: none;
+       }
+       .add-card{
+        margin-right: 15px;
+       }
+       .price{
+        margin-top: 10px;
+        font-size: 15px;
+       }
+       .price1{
+        margin-top: 10px;
+        font-size: 15px;
+       }
+       @keyframes fadeup{
+        0%{
+            transform: translateY(-50px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+       }
+       @keyframes fadedown{
+        0%{
+            transform: translateY(50px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+       }
+       @keyframes scaled{
+        0%{
+            transform: scale(0.8);
+        }
+        100%{
+            transform: scale(1.2);
+        }
+       }
+       @keyframes rotated{
+        0%{
+            transform: rotate(0);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+       }
+       
+    </style>
+</head>
+<body>
+    <section class="sec-ctn">
+        <div class="ctn">
+
+            <article class="nike">
+                <div class="wraper-nike">
+                    <div class="nike-img">
+                        <p style="animation: scaled 2s linear infinite alternate;" class="hot-badge">Hot</p>
+                        <div style="animation: rotated 2s linear infinite;"  class="nike-icon">
+                            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="1 1 18 18" height="18px" width="18px" fill="#999999"><path d="M10,17L8.96,16.06q-2.08-1.85-3.44-3.18T3.39,10.53T2.3,8.65T2,6.9Q2,5.04 3.27,3.77T6.4,2.5q1.02,0 1.98,0.44T10,4.17q0.67-0.79 1.63-1.23T13.6,2.5q1.85,0 3.12,1.27T18,6.9q0,0.9-0.29,1.73t-1.07,1.85t-2.15,2.36Q13.13,14.19 11,16.1L10,17Zm0-2.02q1.94-1.73 3.19-2.95t1.99-2.13t1.03-1.61T16.5,6.9q0-1.23-0.83-2.06T13.6,4q-0.73,0-1.36,0.3T11.15,5.15L10.42,6H9.58L8.85,5.15Q8.4,4.6 7.74,4.3T6.4,4Q5.17,4 4.33,4.83T3.5,6.9q0,0.69 0.27,1.36T4.76,9.83t1.98,2.13T10,14.98Zm0-5.5Z"/></svg>
+                        </div>
+                        <img src="nike.png" alt="this nike produced in china and america">
+                    </div>
+                </div>
+                <div class="change-color">
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                    <div class="color3"></div>
+                    <div class="color4"></div>
+                    <div class="color5"></div>
+                    <div class="color6"></div>
+                    <div class="color7"></div>
+                    <p>+10</p>
+                </div>
+                   <div class="discription">
+                    <p class="title">Nike Dunk Low Retro</p>
+                    <p class="dis">Men's Shoes</p>
+                    <p class="price1">$83.93</p>
+                    <div class="btn1">
+                        <button class="view">View Details</button>
+                        <button class="add-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#999999"><path d="M6,22q-0.82,0-1.41-0.59T4,20V8Q4,7.18 4.59,6.59T6,6H8Q8,4.35 9.18,3.17T12,2t2.83,1.17T16,6h2q0.82,0 1.41,0.59Q20,7.18 20,8V20q0,0.82-0.59,1.41T18,22H6Zm0-2H18V8H16v2q0,0.42-0.29,0.71T15,11t-0.71-0.29Q14,10.43 14,10V8H10v2q0,0.42-0.29,0.71T9,11q-0.42,0-0.71-0.29Q8,10.43 8,10V8H6V20ZM10,6h4q0-0.82-0.59-1.41T12,4T10.59,4.59Q10,5.18 10,6ZM6,20V8V20Z"/></svg>
+                            <p>Add to Cart</p>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="addidas">
+                <div class="wraper-nike">
+                    <div class="addidas-img">
+                        <p style="animation: scaled 2s linear infinite alternate;" class="new-badge">New</p>
+                        <div style="animation: rotated 2s linear infinite;"  class="addidas-icon">     
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 18 18" height="18px" width="18px" fill="#999999"><path d="M10,17L8.96,16.06q-2.08-1.85-3.44-3.18T3.39,10.53T2.3,8.65T2,6.9Q2,5.04 3.27,3.77T6.4,2.5q1.02,0 1.98,0.44T10,4.17q0.67-0.79 1.63-1.23T13.6,2.5q1.85,0 3.12,1.27T18,6.9q0,0.9-0.29,1.73t-1.07,1.85t-2.15,2.36Q13.13,14.19 11,16.1L10,17Zm0-2.02q1.94-1.73 3.19-2.95t1.99-2.13t1.03-1.61T16.5,6.9q0-1.23-0.83-2.06T13.6,4q-0.73,0-1.36,0.3T11.15,5.15L10.42,6H9.58L8.85,5.15Q8.4,4.6 7.74,4.3T6.4,4Q5.17,4 4.33,4.83T3.5,6.9q0,0.69 0.27,1.36T4.76,9.83t1.98,2.13T10,14.98Zm0-5.5Z"/></svg>
+                        </div>
+                        <img src="nike.png" alt="this addidas produced in cambodia and vietnam">
+                    </div>
+                    <div class="change-color">
+                        <div class="color1"></div>
+                        <div class="color2"></div>
+                        <div class="color3"></div>
+                        <div class="color4"></div>
+                        <div class="color5"></div>
+                        <div class="color6"></div>
+                        <div class="color7"></div>
+                        <p>+10</p>
+                        </div>
+                    </div>
+                    <div class="discription">
+                        <p class="title">Nike Dunk Low Retro</p>
+                        <p class="dis"> Men's Shoes 4.5star 5,568 reivews</p>
+                        <div class="price">
+                            <p>$83.93</p>
+                            <p >$120</p>
+                            <p style="color: var(--discound);animation: scaled 1s infinite alternate;">30% off</p>
+                        </div>
+                        <div class="btn2">
+                            <button class="view">View Details</button>
+                            <button class="add-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#999999"><path d="M6,22q-0.82,0-1.41-0.59T4,20V8Q4,7.18 4.59,6.59T6,6H8Q8,4.35 9.18,3.17T12,2t2.83,1.17T16,6h2q0.82,0 1.41,0.59Q20,7.18 20,8V20q0,0.82-0.59,1.41T18,22H6Zm0-2H18V8H16v2q0,0.42-0.29,0.71T15,11t-0.71-0.29Q14,10.43 14,10V8H10v2q0,0.42-0.29,0.71T9,11q-0.42,0-0.71-0.29Q8,10.43 8,10V8H6V20ZM10,6h4q0-0.82-0.59-1.41T12,4T10.59,4.59Q10,5.18 10,6ZM6,20V8V20Z"/></svg>
+                                <p>Add to Cart</p>
+                            </button>
+                        </div>
+                    </div>   
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
