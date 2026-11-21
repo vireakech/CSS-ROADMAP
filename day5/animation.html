@@ -58,6 +58,7 @@
         .rotate { background: #6c5ce7; animation: rotateBox 2s linear infinite; }
         .bounce { background: #00b894; animation: bounce 1.5s ease-in-out infinite; }
         .pulse { background: #e17055; animation: pulse 1.5s ease-in-out infinite; }
+        .skew { background: #0984e3; animation: skewBox 1.8s ease-in-out infinite alternate; }
 
         @keyframes fadeIn {
             0% { opacity: 0.2; transform: scale(0.9); }
@@ -75,8 +76,8 @@
         }
 
         @keyframes rotateBox {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% { transform: rotatey(-60deg); }
+            100% { transform: rotatey(60deg); }
         }
 
         @keyframes bounce {
@@ -87,6 +88,11 @@
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.2); }
+        }
+
+        @keyframes skewBox {
+            0% { transform: skewx(20deg); }
+            100% { transform: skewx(-20deg); }
         }
     </style>
 </head>
@@ -100,6 +106,7 @@
             <div class="box rotate">Rotate</div>
             <div class="box bounce">Bounce</div>
             <div class="box pulse">Pulse</div>
+            <div class="box skew">Skew</div>
         </div>
     </div>
 </body>
