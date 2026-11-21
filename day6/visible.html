@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav,
+        ul,
+        li {
+            width: 220px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            position: relative;
+        }
+        a,
+        .menu-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            text-decoration: none;
+            margin: 10px;
+            width: 200px;
+            background-color: rgb(121, 124, 126);
+            border-radius: 10px;
+        }
+        #menu-toggle {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .menu-toggle {
+            height: 44px;
+            border: 0;
+            cursor: pointer;
+        }
+        #menu-toggle:focus-visible + .menu-toggle {
+            outline: 2px solid aqua;
+            outline-offset: 2px;
+        }
+        .submenu {
+            
+            position: absolute;
+            top: 54px;
+            left: 0;
+            width: 220px;
+        }
+        .submenu a {
+            height: 44px;
+            margin: 6px 10px;
+        }
+        #menu-toggle:checked  ~ .submenu,
+        li:hover .submenu,
+        li:focus-within .submenu {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <input id="menu-toggle" type="checkbox">
+                <label class="menu-toggle" for="menu-toggle" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon" aria-hidden="true">
+                        <path d="M4 5h16"/>
+                        <path d="M4 12h16"/>
+                        <path d="M4 19h16"/>
+                    </svg>
+                </label>
+                <div class="submenu">
+                    <a href="#">home</a>
+                    <a href="#">produced</a>
+                    <a href="#">about</a>
+                    <a href="#">deploy</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
