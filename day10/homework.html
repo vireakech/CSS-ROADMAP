@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg:rgb(23, 22, 46);
+            --muted:blue;
+            --btn-bg:rgba(255, 255, 255, 0.1);
+        }
+        body{min-height: 100vh;display: flex;justify-content: center;align-items: center;color: white;background: linear-gradient(180deg,rgb(15, 15, 30),rgb(5, 5, 41),rgb(28, 28, 57));font-family: cursive;}
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        .wraper{display: grid;grid-template-columns: repeat(3, 290px);gap: 20px;justify-content: center;align-items: center;}
+        .plan-container{width: 100%;min-height: 700px;padding: 100px 20px;display: flex;justify-content: center;align-items: center;}
+        
+        /* basic-plan */
+        .plan-basic{width: 290px;border-radius: 20px;animation: slideup-basic 2s infinite ease-in-out alternate ;}
+        .plan-wraper{width:100% ;padding: 20px;height: 400px;background-color: var(--bg);border-radius: 20px;border: 1px solid white;}
+        h1{font-size: 20px;font-weight: bold;margin-bottom: 10px;}
+        p{font-size: 13px;margin-bottom: 5px;letter-spacing: -0.5px;}
+        .dis{margin-bottom: 20px;}
+        .price{font-weight: bold;font-size: 30px;}
+        .time{font-size: 15px;font-weight: bold;}
+        .plan-time{margin-bottom: 0px;border-bottom: 1px solid rgb(120, 120, 120);padding-bottom: 15px;}
+        ul{padding: 10px;}
+        li{list-style: "-";}
+        .btn{width: 100%;height: 35px;border-radius: 10px;border: none;background-color: var(--btn-bg);font-family: cursive;color: white;font-weight: bold;display: flex;justify-content: center;align-items: center;margin-top: 25px;}
+        .option{margin-bottom: 5px;font-size: 13px;}
+        
+        /* pro plan */
+        .plan-pro{width: 290px;border-radius: 20px;animation: slideup-pro 2s infinite ease-in-out alternate ;}
+        .plan-pro-wraper{width:100% ;padding: 20px;height: 416px;background-color: var(--bg);border-radius: 20px;border: 1px solid white;}
+        .btn-pro{width: 100%;height: 35px;border-radius: 10px;border: none;background-color: var(--btn-bg);font-family: cursive;color: white;font-weight: bold;display: flex;justify-content: center;align-items: center;margin-top: 15px;}
+        /* plan enter-price */
+        .plan-enterprise{width: 290px;border-radius: 20px;animation: slideup-inter 2s infinite ease-in-out alternate ;}
+        .plan-interprise-wraper{width:100% ;padding: 20px;height: 400px;background-color: var(--bg);border-radius: 20px;border: 1px solid white;}
+        .btn-inter{width: 100%;height: 35px;border-radius: 10px;border: none;background-color: var(--btn-bg);font-family: cursive;color: white;font-weight: bold;display: flex;justify-content: center;align-items: center;}
+        .plan-basic:hover{
+            border-top: 4px solid blue;
+            box-shadow: 0px -5px 10px 1px blue;
+        }
+        .plan-pro:hover{
+            border-top: 4px solid blue;
+            box-shadow: 0px -5px 10px 1px blue;
+        }
+        .plan-enterprise:hover{
+            border-top: 4px solid blue;
+            box-shadow: 0px -5px 10px 1px blue;
+            animation: scaler 0.5s ease-in-out alternate;
+            animation-play-state: paused;
+            
+        }
+        .plan-pro:hover{
+            border-top: 4px solid blue;
+            box-shadow: 0px -5px 10px 1px blue;
+            animation: scaler 0.5s ease-in-out alternate;
+            animation-play-state: paused;
+            
+        }
+        .plan-basic:hover{
+            border-top: 4px solid blue;
+            box-shadow: 0px -5px 10px 1px blue;
+            animation: scaler 0.5s ease-in-out alternate;
+            animation-play-state: paused;
+            
+        }
+        button:hover{ 
+            background-color: var(--muted);
+            border-top: 4px solid blue;
+            box-shadow: 0px -1px 5px  blue;}
+        button:hover{background-color: var(--muted);}
+        @media (max-width:600px){
+            .plan-container{min-height: 100vh;padding: 80px 20px;}
+            .wraper{grid-template-columns: 290px;gap: 20px;}
+        }
+        @media (min-width:601px) and (max-width:900px) {
+            .plan-container{min-height: 100vh;padding: 80px 20px;}
+            .wraper{grid-template-columns: repeat(2, 290px);gap: 20px;}
+        }
+        @keyframes scaler{
+            0%{transform: scale(1.2);}
+            100%{transform: scale(1.2);}
+        }
+        @keyframes slideup-pro{
+            0%{transform:translateY(-15px);}
+            100%{transform:translateY(20px);}
+        }
+        @keyframes slideup-basic{
+            0%{transform:translateY(20px);}
+            100%{transform:translateY(-20px);}
+        }
+        @keyframes slideup-inter{
+            0%{transform:translateY(15px);}
+            100%{transform:translateY(-20px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-container">
+        <div class="wraper">
+            <div class="plan-basic">
+                <div class="plan-wraper">
+                    <h1>Basic</h1>
+                    <p class="dis">For individuals and small teams getting stated.</p>
+                    <div class="plan-time">
+                        <span class="price">$10</span>
+                        <span class="time">/month</span>
+                    </div>
+                    <ul>
+                        <li><p class="option">Task manangerment essentails</p></li>
+                        <li><p class="option">Team messaging & file sharing</p></li>
+                        <li><p class="option">Activity feed & project overview</p></li>
+                        <li><p class="option">Mobile & desktop access</p></li>
+                        <li><p class="option">Email support</p></li>
+                    </ul>
+                    <button class="btn">Get started</button>
+                </div>
+            </div>
+            <div class="plan-pro">
+                <div class="plan-pro-wraper">
+                    <h1>Pro</h1>
+                    <p class="dis">For growing teams that need smarter workflows</p>
+                    <div class="plan-time">
+                        <span class="price">$20</span>
+                        <span class="time">/month</span>
+                    </div>
+                    <ul>
+                        <li><p class="option">Time tracking & workload manangerment</p></li>
+                        <li><p class="option">Advanced reporting & filters</p></li>
+                        <li><p class="option">Custom labels, priorities & checklists</p></li>
+                        <li><p class="option">Project insights & team analytics</p></li>
+                        <li><p class="option">Billing & usage tracking</p></li>
+                        <li><p class="option">Priority support</p></li>
+                    </ul>
+                    <button class="btn-pro">Start with Pro</button>
+                </div>
+            </div>
+            <div class="plan-enterprise">
+                <div class="plan-interprise-wraper">
+                    <h1>Enterprise</h1>
+                    <p class="dis">For large organizations with advanced needs.</p>
+                    <div class="plan-time">
+                        <span class="price">$50</span>
+                        <span class="time">/month</span>
+                    </div>
+                    <ul>
+                        <li><p class="option">Dedicated account manager</p></li>
+                        <li><p class="option">Custom intergrations & automation</p></li>
+                        <li><p class="option">SSO & role-baced access control</p></li>
+                        <li><p class="option">Unlimited projects & users</p></li>
+                        <li><p class="option">KPI daskboads & reporting tools </p></li>
+                        <li><p class="option">Onboarding support</p></li>
+                    </ul>
+                    <button class="btn-inter">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
