@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       }
+       body{
+        background-color: aliceblue;
+        font-family: cursive;
+        min-height: 100vh;
+       }
+       .nav-container{
+        background-color: black;
+        padding: 20px;
+       }
+       .wraper{
+        width: min(1200px,100%);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+       }
+       a{
+        text-decoration: none;
+        font-size: 20px;
+        color: aliceblue;
+       }
+       .nav-bar{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+       }
+       .taggle{
+        display: none;
+       }
+       .manu{
+        display: none;
+        cursor: pointer;
+       }
+       @media(max-width:600px){
+        .manu{
+            display: flex;
+            align-items: center;
+        }
+        .nav-bar{
+            position: absolute;
+            top: calc(100% + 20px);
+            right: 0;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+            background-color: black;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            padding: 10px 0;
+            z-index: 10;
+        }
+        .nav-bar a{
+            padding: 12px;
+        }
+        .taggle:checked ~ .nav-bar{
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="wraper">
+            <h1 style="color: aliceblue;">Tek</h1>
+            <input class="taggle" type="checkbox" id="menu-toggle">
+            <label class="manu" for="menu-toggle" aria-label="Toggle navigation menu">
+                <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu preview-icon" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+            </label>
+            <nav class="nav-bar" aria-label="Main navigation">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Deploy</a>
+                <a href="#">Why Us</a>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

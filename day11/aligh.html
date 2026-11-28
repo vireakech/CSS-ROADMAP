@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items Example</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .example {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        code {
+            color: #0969da;
+        }
+
+        /* 1. Align text inside a box */
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /* 2. Put a box in the center of the page */
+        .box-center {
+            width: 200px;
+            margin: 10px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #ffd8a8;
+        }
+
+        /* 3. Flexbox: align items vertically */
+        .flex-row {
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: #dbeafe;
+            border-radius: 10px;
+        }
+
+        .item {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            background-color: #2563eb;
+            border-radius: 8px;
+        }
+
+        /* 4. Different horizontal positions */
+        .position-demo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            background-color: #dcfce7;
+            border-radius: 10px;
+        }
+
+        .start {
+            justify-content: flex-start;
+        }
+
+        .middle {
+            justify-content: center;
+        }
+
+        .end {
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Align Items - Easy Examples</h1>
+
+    <div class="example">
+        <h2>1. Align text</h2>
+        <p><code>text-align: left</code></p>
+        <p class="text-left">This text is on the left.</p>
+
+        <p><code>text-align: center</code></p>
+        <p class="text-center">This text is in the center.</p>
+
+        <p><code>text-align: right</code></p>
+        <p class="text-right">This text is on the right.</p>
+    </div>
+
+    <div class="example">
+        <h2>2. Center a box</h2>
+        <p>Use <code>margin: 10px auto</code> to center a box.</p>
+        <div class="box-center">Center box</div>
+    </div>
+
+    <div class="example">
+        <h2>3. Flexbox center</h2>
+        <p>
+            <code>justify-content: center</code> = left and right position.<br>
+            <code>align-items: center</code> = top and bottom position.
+        </p>
+        <div class="flex-row">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>4. Horizontal positions</h2>
+
+        <p><code>justify-content: flex-start</code></p>
+        <div class="position-demo start">
+            <div class="item">Start</div>
+        </div>
+
+        <p><code>justify-content: center</code></p>
+        <div class="position-demo middle">
+            <div class="item">Middle</div>
+        </div>
+
+        <p><code>justify-content: flex-end</code></p>
+        <div class="position-demo end">
+            <div class="item">End</div>
+        </div>
+    </div>
+</body>
+</html>
